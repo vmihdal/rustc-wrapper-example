@@ -13,7 +13,7 @@ RUSTC_WRAPPER=./target/debug/rustc-wrapper cargo build -p example
 Output:
 
 ```rust
-[rustc-wrapper/src/main.rs:28:17] type_layout = TyAndLayout {
+TyAndLayout {
     ty: A,
     layout: Layout {
         size: Size(16 bytes),
@@ -46,5 +46,10 @@ Output:
         randomization_seed: 3750484725686110678,
     },
 }
-Hello from your RUSTC wrapper
+
+[0] c: [u8; 12_usize], offset = 0, size = 12
+
+[1] b: u16, offset = 12, size = 2
+
+[2] a: u8, offset = 14, size = 1
 ```
